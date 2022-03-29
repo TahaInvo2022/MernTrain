@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Case</title>
+</head>
+<body>
+
+    <p id="demo"></p>
+
+    <script type="text/javascript">
+        let element = document.getElementById('demo');
+        let text = "Today is ";
+        switch (new Date().getDay()) {
+            case 1:
+                element.innerText = text + 'Monday'
+                break;
+            case 2:
+                element.innerText = text + 'Tuesday'
+                break;
+            case 3:
+                element.innerText = text + 'Wednesday'
+                break;
+            case 4:
+                element.innerText = text + 'Thursday'
+                break; 
+            case 5:
+                element.innerText = text + 'Friday'
+                break;   
+            case 6:
+                element.innerText = text + 'Saturday'
+                break;      
+            default:
+                element.innerText = text + 'Sunday'
+                break;
+        }
+    </script>
+</body>
+</html>
