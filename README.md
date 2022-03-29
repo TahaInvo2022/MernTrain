@@ -1,13 +1,17 @@
 
 <!-- GETTING STARTED -->
-## Getting Started
+## Javascript Training
 
-This project is a practice for the javascript daily tasks 
+Javascript Training project with javascript coding practice. 
 
-<!-- CONTRIBUTING -->
-## Creater of the Repo
+<!-- Name -->
+## Name
 
-This repo is created by taha.
+Javascript Training project
+
+## Description
+
+Javascript Trianing project only javascript is used for understanding and hands-on experience.
 
 <!-- LICENSE -->
 ## License
