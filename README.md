@@ -12,7 +12,7 @@ This repo is created by taha.
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+This project is not licensed from any institute.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
