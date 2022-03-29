@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForIn train</title>
+</head>
+<body>
+    <h1 id="demo"></h1>
+    <script type="text/javascript">
+        let element  = document.getElementById('demo');
+        let text = "";
+        let person = [
+        {firstName: 'taha', companyName: 'Invozone', age:'25'},
+        {firstName: 'Bilal', companyName: 'Crewlogix', age:'25'}
+        ]
+        for (const x of person) {
+            text += x.firstName + ' ' + x.companyName + ' ' + x.age + '<br>';
+        }
+        element.innerHTML = text;
+    </script>
+</body>
+</html>

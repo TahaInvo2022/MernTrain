@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Constructor</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script type="text/javascript">
+        let sum = new Function('a', 'b', 'return a+b');
+        let element = document.getElementById('demo');
+        element.innerHTML = "The sum of the function constructor is ",sum(2,10)
+
+        /* Function Literals
+            New function declearation method introducted the main difference was compile time.
+
+            when we assign a veriable aynonemous function then it will only be compiled when veriable is used.
+            e.g let sum = function(){}
+            
+            and on the other hand function is compile when the program is compiling and it can be used any time.
+            e.g function sum(){
+            }
+            
+            Thats the major difference.
+        */
+    </script>
+</body>
+</html>
