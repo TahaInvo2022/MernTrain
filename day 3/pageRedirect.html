@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page redirect Method</title>
+</head>
+<body>
+
+    <button onClick="hrefBtn()">Href button Action</button>
+    <button onClick="replaceBtn()">Replace button Action</button>
+
+
+    <script type="text/javascript">
+
+        // This will redirect the browser to the asked url but here we have a backlog e.g we can go back by using the arrows.
+        function hrefBtn() {
+            window.location.href = 'https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_redirect_webpage'
+        }
+
+        // replace will replace the current url with the asked url and then there is no backlog.
+        function replaceBtn(){
+            location.replace('https://www.google.com/')
+        }
+    </script>
+</body>
+</html>

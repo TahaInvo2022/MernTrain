@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies Training</title>
+</head>
+<body onload="checkCookie('username')">
+
+    <script type="text/javascript">
+        //cookie is a short text in the form of file which helps to remember the user preferences. 
+
+        //saving cooking for the future use.
+        function saveCookie(name="", value="" , time=0){
+            // setting up the expiry date for the cookie
+            const d = new Date();
+            d.setTime(d.getTime() + (time*24*60*60*1000));
+            let expires = "expires="+d.toUTCString();
+            //saving the cookie
+            document.cookie = name+'='+value+';'+ expires+';path=/';
+        }
+
+        //get cookie
+        function getCookie(cname)
+        {
+            let name = cname + '=';
+            //decord the cookie
+            let decodedCookie = decodeURIComponent(document.cookie);
+            //split the decorded cookie
+            let arr = decodedCookie.split(';');
+            //run a loop on the split array so the asked cookie can be get.
+            for (let index = 0; index < arr.length; index++) {
+                let element = arr[index];
+                while (element.charAt(0) == ' ') {
+                    element = element.substring(1);
+                }
+                //matching the key with the substring key to get the value.
+                if(element.indexOf(name) == 0){
+                    return element.substring(name.length, element.length);
+                }
+            }
+            return '';
+        }
+
+        // check the cookie is store already or not if not then save it
+        function checkCookie(cname){
+
+            // get the value and show it
+            let value = getCookie(cname);
+            console.log(document.cookie);
+            if(value!=''){
+                alert('welcome back to our website ' + value);
+            }
+            else{
+                //prompt is used to get value by showing an alert box.
+                user = prompt('please enter your name', "");
+
+                //if the value is not empty then save it.
+                if(user!='' && user!=null){
+                    console.log("i am here");
+                    saveCookie('username', user, 1);
+                }
+
+            }
+        }
+
+        /*
+            For deleting a cookie just pass empty string to the same key which you want to delete from the cookie
+            e.g saveCookie('username', '', 1)
+            This will delete the username value from the cookie. 
+        */
+
+    </script>
+</body>
+</html>
