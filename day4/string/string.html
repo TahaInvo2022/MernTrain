@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Playground</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <script type="text/javascript">
+        //Lets play with numbers here
+        let element = document.getElementById('demo');
+        let text = "";
+
+        //charAt() will return the character from the specified location
+        let x = 'invozone';
+        text += 'charAt is '+ x.charAt(2) +'<br>';
+
+        //charCodeAt() will return the unicode of the character from the specified location
+        text += 'charCodeAt is '+ x.charCodeAt(2)+'<br>';
+
+        //concat will join to strings 
+        let y = 'great'
+        text += 'concate is '+ x.concat(y)+'<br>';
+
+        //index and lastindex they both are case sensitive
+        y = "hey i'm from pakistan, you are also from pakistan"
+        // indexof will show the first occurance
+        text += 'indexof is '+ y.indexOf('Pakistan')+'<br>';
+        // lastindex will show the last occurance
+        text += 'lastIndexof is '+ y.lastIndexOf('Pakistan')+'<br>';
+
+        // localecompare is used to compare 2 strings in the locale language
+        let tempA = "great"
+        let tempB = "great"
+        text += 'localeCompare is '+ tempA.localeCompare(tempB)+'<br>';
+
+        // match() match is used to match the given regex with the string and return the answer accordingly.
+        y = "hey i'm from pakistan, you are also from pakistan"
+        text += 'Match is '+ y.match(/rom/)+'<br>';
+        //search method work same as match but search return the index of searched string and match return array of matches
+
+        // replace is use to find string and replace it by the given string. replace will replace the first occrance to change all use regular expression make it g (global)
+        text += 'Replace is '+ y.replace(/pakistan/g, 'india')+'<br>';
+
+        //slice is use to slice a string
+        // if we don't give the second parameter then it will slice fro 5th index to the end 
+        text += 'Slice without range is '+ y.slice(5)+'<br>';
+        // if we specify the range then it will stop to that range
+        text += 'Slice with range is '+ y.slice(5,10)+'<br>';
+        // and slice will provide new string
+
+
+        // split function will split the string and convert it into string
+        text += 'Split without range is '+ y.split(" ")+'<br>';
+        // you can also give range to limit the split function 
+        text += ' with range is '+ y.split(" ", 3)+'<br>';
+
+        // substr and substring both work same but main difference is in there range 
+
+        // substr second parameter take the length of the substring 
+        text += 'Substr with range is '+ y.substr(1, 5)+'<br>';
+
+        // substring second parameter take the ending index of the substring
+        text += 'Substring with range is '+ y.substring(1, 5)+'<br>';
+
+        
+
+        element.innerHTML = text
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Methods</title>
+</head>
+<body>
+
+    <h1 id="demo"></h1>
+
+    <script type="text/javascript">
+        // in this exercise we will see how to use the methods inside the object by using this keyword
+        // this keyword scope is different in different situations. 
+        // But here when we use it inside the object it will refer to the current object. Lets play.
+
+        let element = document.getElementById('demo')
+
+        //lets create a person obj
+        let person  = {
+            firstName: 'Taha',
+            lastName: 'Shahid',
+            age: 25,
+            fullName: function () {
+                return this.firstName+' '+this.lastName
+            }
+        }
+
+        // When we call a object method like below then it will show us the defination of the method
+        // element.innerHTML = 'Hey '+person.fullName+', how are you man? hows your second day is going?'
+
+        // To see the proper returned value of the object method we will write it as below, we have to use the () brackets inorder to see the function result 
+        element.innerHTML = 'Hey '+person.fullName()+', how are you man? hows your second day is going?'
+
+
+
+
+    </script>
+</body>
+</html>

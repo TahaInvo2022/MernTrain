@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+</head>
+<body>
+    
+    <p id="demo"></p>
+
+    <script type="text/javascript">
+        //Lets play with array here
+        let element = document.getElementById('demo');
+        let text = "";
+
+        //concat array will cancat array into single array 
+        let arr = [1,2,3,4];
+        let arr3 = [1,2,3,4,5,6,7,8];
+        let arr2 = ['taha', 'shaery', 'test']
+        text += "Concat array Result " + arr.concat(arr2) + '<br>';
+
+        //every is use to iterate over arr and run passed function for all
+        function checkAge(age){
+            return age > 5;
+        }
+        text += "Every array Result " + arr.every(checkAge) + '<br>';
+
+        //join() is used to join the array if you don't pass the seperator parameter it will join automatically by placing the commas.
+        text += "join array Result " + arr2.join() + '<br>';
+        // join array with seperator
+        text += "join array Result with seperator " + arr.join(' and ') + '<br>';
+
+        //from is used to return array over the string
+        text += "Create array from string " + Array.from('i am okay and you') + '<br>';
+
+        //fill method will fill out array with the given string you can give specified rang parameters for the starting point andending point, will change the origin arr
+        text += "Fill from string " + arr.fill('kiwi') + '<br>';
+
+        //lastindexof and indexof works alike the only difference is one runs from right to left and the other one runs from left to right
+
+        //map we and change the value of current array, through foreach we cannot do that
+
+        // filter will filter the array and provide new array
+
+        // find will use to find an object singly depending on conditions
+
+        // Lets play with reduce
+        let total
+        
+        text += "Reduce arr " + arr3.reduce((previous,current) => {
+            return previous + current
+        },0) + '<br>';
+        // reduceRight also works alike but it starts from the right
+
+        //reverse is used to reverse the array
+
+        /*
+          push is use to push an element at the end of Array
+          pop is used to pull element from the end of the array 
+
+          shift is used to pull an element at the start of array
+          unshift is used to push an element at the start of the array
+        */
+
+
+        //slice is used to get the array elements according to the provided range as a new array 
+        text += "Slice arr " + arr2.slice(1,2) + '<br>';
+
+        // splice is used to add and remove elements from the original array 
+        text += "Splice arr " + arr3.splice(1,2) + '<br>';
+        text += arr3 + '<br>'
+        
+        // some also work alike every() but some will return true if any element of array fulfills the condition and stop
+        
+
+        element.innerHTML = text
+    </script>
+</body>
+</html>

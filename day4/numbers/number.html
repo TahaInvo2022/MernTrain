@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numbers</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <script type="text/javascript">
+        //Lets play with numbers here
+        let element = document.getElementById('demo');
+        let text = "";
+
+        // lets convert a number into string
+        let x = 12345;
+        x.toString();
+        text += 'String number '+ x + '<br>'
+
+        // Exponential 
+        x = 9.823
+        x = x.toExponential(2);
+        text += 'Exponential ' + x+'<br>'
+
+        // Fixed 
+        x = 9.823
+        x = x.toFixed(1);
+        text += 'Fixed ' + x+'<br>'
+
+
+        // Percision 
+        x = 9.823
+        x = x.toFixed(4);
+        text += 'Percision ' + x+'<br>'
+
+        // ValueOf 
+        x = 9.823
+        x = x.valueOf();
+        text += 'ValueOf ' + x+'<br>'
+
+        // toLocaleString 
+        x = 9.823
+        x = x.toLocaleString();
+        text += 'toLocaleString ' + x+'<br>'
+
+        //max value
+        //MAX_VAlue can only be used with Number only and this will return largest possible number in JS
+        // We can not use it with any veriable it will return undefined
+        text += 'MAX_VALUE ' + Number.MAX_VALUE+'<br>'
+
+        //Min value
+        //MIN_VAlue can only be used with Number only and this will return smallest possible number in JS
+        // We can not use it with any veriable it will return undefined
+        text += 'MIN_VALUE ' + Number.MIN_VALUE+'<br>'
+
+        // if you want to add new property or a value to number then we can do it by using the prototype obj. prototype obj is available with all objects in the JS
+        Number.prototype.halfCal = function(){
+            return this.valueOf() / 2;
+        }
+
+        x = 10
+        text += "Prototype Result " + x.halfCal();
+
+
+        element.innerHTML = text
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Defined objects</title>
+</head>
+<body>
+
+    <h1 id="demo"></h1>
+    
+    <script type="text/javascript">
+        /*
+            There are two types of objects in the JS
+            1. Built-in Objects
+                These are those objects which are provided by the JS itself. most common objects are String, Number, Boolean etc
+            2. User defined objects
+               Those objects which are defined by the user are called user defined objects.
+
+            Lets create an user defined object
+        */
+
+        //lets make a constructor first
+        function Employee(name, age)
+        {
+            this.name = name;
+            this.age = age;
+        }
+
+        //Every object in JS is inherited with superClass cnstructor due to which we got access of different object methods and prototype object. if we want to add methods in user defined methods then we have to use prototype object. lets create method.
+
+        Employee.prototype.getName = function(){
+            return this.name;
+        }
+
+        Employee.prototype.getAge = function(){
+            return this.age;
+        }
+
+        Employee.prototype.setName = function(name){
+            this.name = name;
+        }
+
+        Employee.prototype.setAge = function(age){
+            this.age = age;
+        }
+
+        let e1 = new Employee('Taha' , 25);
+        let e2 = new Employee('Bilal', 27);
+
+        let element = document.getElementById('demo');
+
+        element.innerHTML = 'hello my name is '+e1.getName()+' and my age is '+e1.getAge()+'<br>'+'hello my name is '+e2.getName()+' and my age is '+e2.getAge();
+
+        setTimeout(() => {
+            e2.setAge(29);
+            e2.setName('shaery')
+            element.innerHTML = 'hello my name is '+e1.getName()+' and my age is '+e1.getAge()+'<br>'+'hello my name is '+e2.getName()+' and my age is '+e2.getAge();
+        }, 2000);
+
+    </script>
+</body>
+</html>

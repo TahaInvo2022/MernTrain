@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects in JS</title>
+</head>
+<body>
+    
+    <h1 id="demo"></h1>
+
+    <script type="text/javascript">
+        let element = document.getElementById('demo');
+
+        //let create a object there are 2 ways to do so 1. use new keyword 2. use object literal.  we will use object literal.
+
+        let person = {
+            name: 'taha',
+            description: 'Hello '+this.name+' how are you Hope your doing well. How old are you?'
+        }
+        // Below line will display the description into the html element 
+        element.innerHTML = person.description;
+
+
+        // create a copy of object
+        // let x = person (this will not generate a new copy of object. as in js objects are passed by reference not by value. lets try it)
+
+        let cPerson = person;
+        // change a property of cPerson object.
+        cPerson.name = 'Haider'
+        cPerson.description = 'Hello '+cPerson.name+', i am feeling great. i am 25 years old?'
+
+        // now set some timeout to avoid instant change 
+        setTimeout(() => {
+            element.innerHTML = person.description;
+        }, 5000);
+
+
+    </script>
+</body>
+</html>
